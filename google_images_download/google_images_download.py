@@ -535,7 +535,7 @@ class googleimagesdownload:
                 else:
                     prefix = ''
 
-                path = main_directory + "/" + dir_name + "/" + prefix + str(count) + ". " + image_name
+                path = main_directory + "/"  + prefix + str(count) + ". " + image_name
                 output_file = open(path, 'wb')
                 data = response.read()
                 output_file.write(data)
@@ -727,7 +727,7 @@ class googleimagesdownload:
                     search_term = pky + search_keyword[i] + sky
                     dir_name = search_term + ('-' + arguments['color'] if arguments['color'] else '')   #sub-directory
 
-                    self.create_directories(main_directory,dir_name,arguments['thumbnail'])     #create directories in OS
+                    #self.create_directories(main_directory,dir_name,arguments['thumbnail'])     #create directories in OS
 
                     params = self.build_url_parameters(arguments)     #building URL with params
 
